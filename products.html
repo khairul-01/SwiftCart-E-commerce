@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart Shopping</title>
+    <!-- DaisyUi and tailwind setup -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="px-4 md:px-8 lg:px-16">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="-1"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+
+    <!-- Products section -->
+    <section class="space-y-5 bg-gray-50 p-4 md:p-10">
+        <div class="text-center space-y-2">
+            <h1 class="text-5xl font-bold">Our Products</h1>
+        </div>
+
+        <div id="products-category" class="flex gap-4 justify-center items-center mt-10 ">
+            <button onclick="LoadAllProducts()" class="btn">All</button>
+        </div>
+
+        <!-- Product Container -->
+        <div id="product-container" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto p-3">
+
+        </div>
+    </section>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="product_modal_k.showModal()">open modal</button> -->
+    <dialog id="product_modal_k" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box w-11/12 max-w-5xl">
+            <div id="modal-container">
+                
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class=" bg-neutral text-neutral-content p-10">
+
+        <div class="footer sm:footer-horizontal">
+            <aside>
+                <h2 class="text-2xl text-sky-600 font-bold">SwiftCart</h2>
+                <span class="pt-4">Your one-stop shop for all your fashion <br> and lifestyle needs. Quality products,
+                    fast <br> delivery and excellent support</span>
+            </aside>
+            <nav>
+                <h6 class="footer-title">Quick links </h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">Products</a>
+                <a class="link link-hover">About</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">support</h6>
+                <a class="link link-hover">FAQ</a>
+                <a class="link link-hover">Shipping</a>
+                <a class="link link-hover">Returns</a>
+                <a class="link link-hover">Privacy Policy</a>
+            </nav>
+            <form>
+                <h6 class="footer-title">Subscribe to our newsletter</h6>
+                <p>The latest news, article and resource <br> send to your inbox weekly</p>
+                <fieldset class="w-80">
+                    <!-- <label>Enter your email address</label> -->
+                    <div class="join gap-2">
+                        <input type="text" placeholder="Enter your email"
+                            class="input input-bordered join-item text-gray-900" />
+                        <button class="btn btn-primary join-item rounded-xl">Subscribe</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="divider before:bg-gray-800 after:bg-gray-800"></div>
+
+        <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center">
+            <aside class="grid-flow-col items-center">
+
+                <p> © 2026 SwiftCart, Inc. - All right reserved</p>
+            </aside>
+            <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+                <a class="">
+                    <i class="fa-brands fa-facebook-f text-xl"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+                </a>
+                <a>
+                    <i class="fa-regular fa-envelope text-xl"></i>
+                </a>
+            </nav>
+        </footer>
+
+    </footer>
+
+    <!-- script -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

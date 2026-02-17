@@ -28,23 +28,18 @@
                 </div>
                 <ul tabindex="-1"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
             </div>
             <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>Products</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
                 <li><a>About</a></li>
                 <li><a>Contact</a></li>
             </ul>
@@ -105,7 +100,8 @@
     <!-- trending section -->
     <section class="p-4 md:-8 space-y-5">
         <h2 class="text-5xl font-bold mt-10">Trending Now</h2>
-        <div class="mt-10 flex flex-col-3 gap-5">
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- cards -->
             <div class="card bg-base-100 w-96 shadow-sm">
                 <figure class="h-40 md:h-56 lg:h-64 overflow-hidden">
                     <img src="./Assets/leeloothefirst.jpg" alt="Bag" class="h-full w-full object-cover" />
@@ -215,7 +211,8 @@
                 <fieldset class="w-80">
                     <!-- <label>Enter your email address</label> -->
                     <div class="join gap-2">
-                        <input type="text" placeholder="Enter your email" class="input input-bordered join-item" />
+                        <input type="text" placeholder="Enter your email"
+                            class="input input-bordered join-item text-gray-900" />
                         <button class="btn btn-primary join-item rounded-xl">Subscribe</button>
                     </div>
                 </fieldset>
