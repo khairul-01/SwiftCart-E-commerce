@@ -1,4 +1,21 @@
 
+const removeActive = () => {
+    const catButtons = document.querySelectorAll(".cat-active")
+    catButtons.forEach(button => {
+        button.addEventListener("click", function () {
+
+            // remove active from all
+            catButtons.forEach(btn => {
+                btn.classList.remove("btn-primary");
+            });
+
+            // add active to clicked button
+            this.classList.add("btn-primary");
+
+        });
+    });
+}
+
 const dataLoad = async (url) => {
     const loadedData = await fetch(url)
     const data = await loadedData.json()
@@ -14,11 +31,13 @@ const loadCategory = async () => {
     console.log(cat)
     const categoriesContainer = document.getElementById("products-category")
     // console.log(categoriesContainer)
+    
     cat.forEach(data => {
+        removeActive()
         const btn = document.createElement('div')
         console.log(typeof data)
         btn.innerHTML = `
-        <button class="btn" onclick="loaByCategory(\`${data}\`)">${data}</button>
+        <button class="btn cat-active" onclick="loaByCategory(\`${data}\`)">${data}</button>
         `
         categoriesContainer.append(btn);
     })
@@ -33,16 +52,18 @@ const LoadAllProducts = async () => {
 }
 
 const loaByCategory = async (data) => {
-    console.log(data)
+    // console.log(data)
     const fetchProducts = await fetch(`https://fakestoreapi.com/products/category/${data}`)
     const jsonData = await fetchProducts.json()
-    console.log(jsonData)
+    // console.log(jsonData)
+    
     renderProductCards(jsonData)
 }
 
 
 
 const renderProductCards = (products) => {
+    removeActive()
     // getting container by id
     const productsContainer = document.getElementById('product-container')
     // empty the container

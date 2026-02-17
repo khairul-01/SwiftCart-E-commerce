@@ -18,6 +18,19 @@
     <!-- Navbar -->
     <div class="navbar bg-base-100 shadow-sm">
         <div class="navbar-start">
+            
+            <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="products.html">Products</a></li>
+                <li><a class="nav-link">About</a></li>
+                <li><a class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -28,24 +41,12 @@
                 </div>
                 <ul tabindex="-1"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="products.html">Products</a></li>
+                    <li><a class="nav-link">About</a></li>
+                    <li><a class="nav-link">Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>
 
@@ -55,8 +56,8 @@
             <h1 class="text-5xl font-bold">Our Products</h1>
         </div>
 
-        <div id="products-category" class="flex gap-4 justify-center items-center mt-10 ">
-            <button onclick="LoadAllProducts()" class="btn">All</button>
+        <div id="products-category" class="flex flex-wrap gap-4 justify-center items-center mt-10 ">
+            <button onclick="LoadAllProducts()" class="btn btn-primary cat-active">All</button>
         </div>
 
         <!-- Product Container -->
@@ -69,9 +70,9 @@
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="product_modal_k.showModal()">open modal</button> -->
     <dialog id="product_modal_k" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box w-11/12 max-w-5xl">
+        <div class="modal-box w-11/12 md:w-1/2 max-w-5xl">
             <div id="modal-container">
-                
+
             </div>
             <div class="modal-action">
                 <form method="dialog">
@@ -110,7 +111,7 @@
                 <p>The latest news, article and resource <br> send to your inbox weekly</p>
                 <fieldset class="w-80">
                     <!-- <label>Enter your email address</label> -->
-                    <div class="join gap-2">
+                    <div class="join gap-2 flex flex-col sm:flex-row ">
                         <input type="text" placeholder="Enter your email"
                             class="input input-bordered join-item text-gray-900" />
                         <button class="btn btn-primary join-item rounded-xl">Subscribe</button>
@@ -121,7 +122,7 @@
 
         <div class="divider before:bg-gray-800 after:bg-gray-800"></div>
 
-        <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center">
+        <footer class="footer flex flex-col-reverse sm:flex-row justify-between bg-neutral text-neutral-content items-center">
             <aside class="grid-flow-col items-center">
 
                 <p> © 2026 SwiftCart, Inc. - All right reserved</p>
@@ -149,6 +150,7 @@
 
     <!-- script -->
     <script src="./script.js"></script>
+    <script src="./navActive.js"></script>
 
 </body>
 

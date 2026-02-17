@@ -18,6 +18,19 @@
     <!-- Navbar -->
     <div class="navbar bg-base-100 shadow-sm">
         <div class="navbar-start">
+            
+            <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="products.html">Products</a></li>
+                <li><a class="nav-link">About</a></li>
+                <li><a class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -28,24 +41,12 @@
                 </div>
                 <ul tabindex="-1"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="products.html">Products</a></li>
+                    <li><a class="nav-link">About</a></li>
+                    <li><a class="nav-link">Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl text-sky-600 font-bold">SwiftCart</a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end">
-            <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>
 
@@ -72,24 +73,24 @@
         </div>
 
         <!-- cards -->
-        <div class="flex gap-5 mt-10">
-            <div class="card card-body w-96 bg-base-100 shadow-sm px-8">
-                <i class="fa-regular fa-truck"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 p-4">
+            <div class="card card-body max-w-96 bg-base-100 shadow-sm px-8">
+                <i class="fa-regular fa-truck text-xl"></i>
                 <h2 class="font-semibold text-2xl">Fast Delivery</h2>
                 <p>Get your orders delivered to your doorstep quickly and efficiently</p>
             </div>
-            <div class="card card-body w-96 bg-base-100 shadow-sm px-8">
-                <i class="fa-regular fa-headphones"></i>
+            <div class="card card-body max-w-96 bg-base-100 shadow-sm px-8">
+                <i class="fa-regular fa-headphones text-xl"></i>
                 <h2 class="font-semibold text-2xl">24/7</h2>
                 <p>Our support team is available around the clock to assist you.</p>
             </div>
-            <div class="card card-body w-96 bg-base-100 shadow-sm px-8">
-                <i class="fa-solid fa-shield-halved"></i>
+            <div class="card card-body max-w-96 bg-base-100 shadow-sm px-8">
+                <i class="fa-solid fa-shield-halved text-xl"></i>
                 <h2 class="font-semibold text-2xl">Secure Payment</h2>
                 <p>Experience a sage and secure transactions with out encrypted payment systems</p>
             </div>
-            <div class="card card-body w-96 bg-base-100 shadow-sm px-8">
-                <i class="fa-solid fa-rotate"></i>
+            <div class="card card-body max-w-96 bg-base-100 shadow-sm px-8">
+                <i class="fa-solid fa-rotate text-xl"></i>
                 <h2 class="font-semibold text-2xl">Easy Returns</h2>
                 <p>Not satisfied? Return your products easily within 30 days</p>
             </div>
@@ -100,9 +101,9 @@
     <!-- trending section -->
     <section class="p-4 md:-8 space-y-5">
         <h2 class="text-5xl font-bold mt-10">Trending Now</h2>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4">
             <!-- cards -->
-            <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card bg-base-100 max-w-96 shadow-sm">
                 <figure class="h-40 md:h-56 lg:h-64 overflow-hidden">
                     <img src="./Assets/leeloothefirst.jpg" alt="Bag" class="h-full w-full object-cover" />
                 </figure>
@@ -128,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card bg-base-100 max-w-96 shadow-sm">
                 <figure class="h-40 md:h-56 lg:h-64 overflow-hidden">
                     <img src="./Assets/nekrashevich.jpg" alt="T-shirt" class="h-full w-full object-cover" />
                 </figure>
@@ -154,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="card bg-base-100 max-w-96 shadow-sm">
                 <figure class="h-40 md:h-56 lg:h-64 overflow-hidden">
                     <img src="./Assets/cannontaler.jpg" alt="Jacket" class="h-full w-full object-cover" />
                 </figure>
@@ -210,7 +211,7 @@
                 <p>The latest news, article and resource <br> send to your inbox weekly</p>
                 <fieldset class="w-80">
                     <!-- <label>Enter your email address</label> -->
-                    <div class="join gap-2">
+                    <div class="join gap-2 flex flex-col sm:flex-row ">
                         <input type="text" placeholder="Enter your email"
                             class="input input-bordered join-item text-gray-900" />
                         <button class="btn btn-primary join-item rounded-xl">Subscribe</button>
@@ -221,7 +222,7 @@
 
         <div class="divider before:bg-gray-800 after:bg-gray-800"></div>
 
-        <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center">
+        <footer class="footer flex flex-col-reverse sm:flex-row justify-between bg-neutral text-neutral-content items-center">
             <aside class="grid-flow-col items-center">
 
                 <p> © 2026 SwiftCart, Inc. - All right reserved</p>
@@ -247,7 +248,7 @@
 
     </footer>
 
-
+    <script src="./navActive.js"></script>
 </body>
 
 </html>
